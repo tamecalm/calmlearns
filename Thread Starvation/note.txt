@@ -1,0 +1,9 @@
+Generally during the duration of a function called from an event in a GUI application, no other events can be 
+processed. Consequently, if you do a long-running task within something like a click handler, the GUI will become 
+unresponsive. This is something every computer user I have met has experienced at one point or another. This lack of 
+availability of CPU resources is called starvation.
+Node.js is built on the same event loop principle as you find in GUI programs. Therefore, it too can suffer from 
+starvation. To understand it better, let’s go through a few code examples. 
+
+
+timeit.js shows a small snippet of code that measures the time passed using console.time and console.timeEnd functions
